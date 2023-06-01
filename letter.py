@@ -26,13 +26,17 @@ class Letter:
         for word in content.split():
             encrypted_word = ""
             for letter in word:
+                # Get the Unicode code with ord, then offset with the offset and key.
+                # then conver that unicode code back into a unicode character
                 encrypted_word += chr((ord(letter) + offset) + key)
             encrypted_array.append(encrypted_word)
+            # increase the offset for each word
             offset += 1
         return " ".join(encrypted_array)
 
     @staticmethod
     def _decrypt(content: str, key: int):
+        # just do the opposite of the encrypt method
         decrypted_array: list[str] = []
         offset = 1
         for word in content.split():

@@ -5,9 +5,10 @@ from letterbox import LetterBox
 
 
 class Correspondent:
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str, recipient_address: str, address: str) -> None:
         self.name = name
         self.letterbox = LetterBox(self)
+        self.recipient_address = recipient_address
 
     def read_letterbox_letter(self) -> str | None:
         letter = self.letterbox.get_letter()

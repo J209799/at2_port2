@@ -1,2 +1,5 @@
 class PostOffice:
-    pass
+    known_addresses = []
+
+    def __init__(self) -> None:
+        pass
