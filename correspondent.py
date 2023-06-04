@@ -4,10 +4,10 @@ from post_office import PostOffice
 
 
 class Correspondent:
-    def __init__(self, name: str, address: str, decryption_key: str) -> None:
+    def __init__(self, name: str, address: str, key: str) -> None:
         self.name = name
         self.letterbox = LetterBox(self, address)
-        self._key = decryption_key
+        self._key = key
 
     def read_letterbox_letter(self) -> str | None:
         letter = self.letterbox.get_letter()

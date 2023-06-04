@@ -23,7 +23,7 @@ class Letter:
 
     @staticmethod
     def _encrypt(content: str, key: str) -> str:
-        ciphertext = ""
+        ciphertext: str = ""
         key_index = 0
 
         for char in content:
