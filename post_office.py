@@ -3,7 +3,6 @@ from letterbox import LetterBox
 
 
 class PostOffice:
-
     def __init__(self, serviced_addresses: set[LetterBox]) -> None:
         self.serviced_addresses: set[LetterBox] = serviced_addresses
         self.stored_letters: list[Letter] = []
